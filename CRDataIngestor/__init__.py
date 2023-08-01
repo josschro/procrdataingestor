@@ -66,7 +66,7 @@ def main(mytimer: func.TimerRequest) -> None:
     logging.info("Making connection to database")
     conn = connect(param_dic)
 
-    # Check if sensorlist in database is complete
+    # Check if sensorlist in database is complete 
     sensors_db = get_sensors(conn)
     sensor_list_db = sensors_db['sensor_id'].tolist()
     missing_list = np.setdiff1d(sensor_list_api,sensor_list_db).tolist()
