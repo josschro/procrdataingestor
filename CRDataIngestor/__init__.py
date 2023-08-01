@@ -22,7 +22,7 @@ from cr_utils import connect, get_sensors, insert_sensordata,  insert_data
 def main(mytimer: func.TimerRequest) -> None:
     utc_timestamp = datetime.datetime.utcnow().replace(
         tzinfo=datetime.timezone.utc).isoformat()
-    
+    # Database settings
     param_dic = {
     "host": "psqlpro14.postgres.database.azure.com",
     "database": "db",
